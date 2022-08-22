@@ -16,7 +16,7 @@
             </div>
             <div class="col-md-6">
               <div class="tn-img2">
-                <img src="assets/img/news-450x350-2.jpg" alt=""/>
+                <img src="https://i1-vnexpress.vnecdn.net/2022/08/12/Sinhvinngnhkhoahcdliu-16602657-9370-5926-1660266620.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=UHQ6NUgJkkxUnaJtmXcRWg" alt=""/>
                 <div class="tn-title">
                   <a href="">Integer hendrerit elit eget purus sodales maximus</a>
                 </div>
@@ -27,38 +27,38 @@
       </div>
       <div class="col-md-6 tn-right">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6" *ngFor="let new of news | slice:0:4">
             <div class="tn-img">
-              <img src="assets/img/news-350x223-1.jpg" alt=""/>
+              <img src="{{new.img}}" alt=""/>
               <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit</a>
+                <a href="/single-page/{{new.id}}/1">{{new.title}}</a>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="tn-img">
-              <img src="assets/img/news-350x223-2.jpg" alt=""/>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="tn-img">
-              <img src="assets/img/news-350x223-3.jpg" alt=""/>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="tn-img">
-              <img src="assets/img/news-350x223-4.jpg" alt=""/>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit</a>
-              </div>
-            </div>
-          </div>
+<!--          <div class="col-md-6">-->
+<!--            <div class="tn-img">-->
+<!--              <img src="assets/img/news-350x223-2.jpg" alt=""/>-->
+<!--              <div class="tn-title">-->
+<!--                <a href="">Lorem ipsum dolor sit</a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-md-6">-->
+<!--            <div class="tn-img">-->
+<!--              <img src="assets/img/news-350x223-3.jpg" alt=""/>-->
+<!--              <div class="tn-title">-->
+<!--                <a href="">Lorem ipsum dolor sit</a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-md-6">-->
+<!--            <div class="tn-img">-->
+<!--              <img src="assets/img/news-350x223-4.jpg" alt=""/>-->
+<!--              <div class="tn-title">-->
+<!--                <a href="">Lorem ipsum dolor sit</a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
         </div>
       </div>
     </div>
@@ -71,42 +71,18 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h2>Sports</h2>
+        <h2>Category 1</h2>
         <div class="cn-slider">
-<!--          <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme', 'customClassName']">-->
-            <div class="col-md-6">
+          <!--do here-->
+            <div *ngFor="let new of news |slice:0:5; let i = index" class="col-md-6">
               <div class="cn-img">
-                <img src="assets/img/news-350x223-1.jpg" alt=""/>
+                <img src="{{new.img}}" alt=""/>
                 <div class="cn-title">
-                  <a href="">Lorem ipsum dolor sit</a>
+                  <a class="link" href="/single-page/{{new.id}}/1">{{new.title}}</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="cn-img">
-                <img src="assets/img/news-350x223-2.jpg" alt=""/>
-                <div class="cn-title">
-                  <a href="">Lorem ipsum dolor sit</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="cn-img">
-                <img src="assets/img/news-350x223-3.jpg" alt=""/>
-                <div class="cn-title">
-                  <a href="">Lorem ipsum dolor sit</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="cn-img">
-                <img src="assets/img/news-350x223-1.jpg" alt=""/>
-                <div class="cn-title">
-                  <a href="">Lorem ipsum dolor sit</a>
-                </div>
-              </div>
-            </div>
-<!--          </owl-carousel>-->
+
         </div>
         <div class="button_area">
           <button class="prev" appPrev> < </button>
@@ -114,33 +90,18 @@
         </div>
       </div>
       <div class="col-md-6">
-        <h2>Technology</h2>
+        <h2>Category 2</h2>
         <div class="on-slider">
 <!--          <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme', 'customClassName']">-->
-            <div class="col-md-6">
+            <div class="col-md-6" *ngFor="let new of newsCategory2 |slice :0: 5">
               <div class="cn-img">
-                <img src="assets/img/news-350x223-4.jpg" alt=""/>
+                <img src="{{new.img}}" alt=""/>
                 <div class="cn-title">
-                  <a href="">Lorem ipsum dolor sit</a>
+                  <a href="/single-page/{{new.id}}/2">{{new.title}}</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="cn-img">
-                <img src="assets/img/news-350x223-5.jpg" alt=""/>
-                <div class="cn-title">
-                  <a href="">Lorem ipsum dolor sit</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="cn-img">
-                <img src="assets/img/news-350x223-1.jpg" alt=""/>
-                <div class="cn-title">
-                  <a href="">Lorem ipsum dolor sit</a>
-                </div>
-              </div>
-            </div>
+
 <!--          </owl-carousel>-->
         </div>
         <div class="button_area">
@@ -158,34 +119,19 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h2>Business</h2>
+        <h2>Category 3</h2>
         <div class="row cn-slider">
 <!--          <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme', 'customClassName']">-->
-            <div class="col-md-6">
-              <div class="cn-img">
-                <img src="assets/img/news-350x223-5.jpg" alt=""/>
-                <div class="cn-title">
-                  <a href="">Lorem ipsum dolor sit</a>
-                </div>
+          <div class="col-md-6" *ngFor="let new of newsCategory3 |slice :0: 5">
+            <div class="cn-img">
+              <img src="{{new.img}}" alt=""/>
+              <div class="cn-title">
+                <a href="/single-page/{{new.id}}/3">{{new.title}}</a>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="cn-img">
-                <img src="assets/img/news-350x223-4.jpg" alt=""/>
-                <div class="cn-title">
-                  <a href="">Lorem ipsum dolor sit</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="cn-img">
-                <img src="assets/img/news-350x223-3.jpg" alt=""/>
-                <div class="cn-title">
-                  <a href="">Lorem ipsum dolor sit</a>
-                </div>
-              </div>
-            </div>
-<!--          </owl-carousel>-->
+          </div>
+
+
         </div>
         <div class="button_area">
           <button class="prev" appPrev> < </button>
@@ -193,34 +139,17 @@
         </div>
       </div>
       <div class="col-md-6">
-        <h2>Entertainment</h2>
+        <h2>Category 4</h2>
         <div class="row cn-slider">
-<!--          <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme', 'customClassName']">-->
-            <div class="col-md-6">
-              <div class="cn-img">
-                <img src="assets/img/news-350x223-2.jpg" alt=""/>
-                <div class="cn-title">
-                  <a href="">Lorem ipsum dolor sit</a>
-                </div>
+          <div *ngFor="let new of newsCategory4 |slice:0:5; let i = index" class="col-md-6">
+            <div class="cn-img">
+              <img src="{{new.img}}" alt=""/>
+              <div class="cn-title">
+                <a class="link" href="/single-page/{{new.id}}/4">{{new.title}}</a>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="cn-img">
-                <img src="assets/img/news-350x223-1.jpg" alt=""/>
-                <div class="cn-title">
-                  <a href="">Lorem ipsum dolor sit</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="cn-img">
-                <img src="assets/img/news-350x223-3.jpg" alt=""/>
-                <div class="cn-title">
-                  <a href="">Lorem ipsum dolor sit</a>
-                </div>
-              </div>
-            </div>
-<!--          </owl-carousel>-->
+          </div>
+
         </div>
         <div class="button_area">
           <button class="prev" appPrev> < </button>
@@ -239,92 +168,27 @@
       <div class="col-md-6">
         <ul class="nav nav-pills nav-justified">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="pill" href="#featured">Featured News</a>
+            <a class="nav-link active" data-toggle="pill" (click)="middleNews1(0)" *ngIf="numberMiddle1 == 0">Featured News</a>
+            <a class="nav-link" data-toggle="pill" (click)="middleNews1(0)" *ngIf="numberMiddle1 != 0">Featured News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#popular">Popular News</a>
+            <a class="nav-link active" data-toggle="pill" (click)="middleNews1(3)" *ngIf="numberMiddle1 == 3">Popular News</a>
+            <a class="nav-link" data-toggle="pill" (click)="middleNews1(3)" *ngIf="numberMiddle1 != 3">Popular News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#latest">Latest News</a>
+            <a class="nav-link active" data-toggle="pill" (click)="middleNews1(6)" *ngIf="numberMiddle1 == 6">Latest News</a>
+            <a class="nav-link" data-toggle="pill" (click)="middleNews1(6)" *ngIf="numberMiddle1 != 6">Latest News</a>
           </li>
         </ul>
 
         <div class="tab-content">
-          <div id="featured" class="container tab-pane active">
-            <div class="tn-news">
+          <div class="container tab-pane active">
+            <div class="tn-news" *ngFor="let newMiddle of middleNew1">
               <div class="tn-img">
-                <img src="assets/img/news-350x223-1.jpg" alt=""/>
+                <img src="{{newMiddle.img}}" alt=""/>
               </div>
               <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-2.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-3.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-          </div>
-          <div id="popular" class="container tab-pane fade">
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-4.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-5.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-1.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-          </div>
-          <div id="latest" class="container tab-pane fade">
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-2.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-3.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-4.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
+                <a href="/single-page/{{newMiddle.id}}/1">{{newMiddle.title}}</a>
               </div>
             </div>
           </div>
@@ -334,92 +198,27 @@
       <div class="col-md-6">
         <ul class="nav nav-pills nav-justified">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="pill" href="#m-viewed">Most Viewed</a>
+            <a class="nav-link active" data-toggle="pill" (click)="middleNews2(0)" *ngIf="numberMiddle2 == 0">Most View</a>
+            <a class="nav-link" data-toggle="pill" (click)="middleNews2(0)" *ngIf="numberMiddle2 != 0">Most View</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#m-read">Most Read</a>
+            <a class="nav-link active" data-toggle="pill" (click)="middleNews2(3)" *ngIf="numberMiddle2 == 3">Most Read</a>
+            <a class="nav-link" data-toggle="pill" (click)="middleNews2(3)" *ngIf="numberMiddle2 != 3">Most Read</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#m-recent">Most Recent</a>
+            <a class="nav-link active" data-toggle="pill" (click)="middleNews2(6)" *ngIf="numberMiddle2 == 6">Most Recent</a>
+            <a class="nav-link" data-toggle="pill" (click)="middleNews2(6)" *ngIf="numberMiddle2 != 6">Most Recent</a>
           </li>
         </ul>
 
         <div class="tab-content">
-          <div id="m-viewed" class="container tab-pane active">
-            <div class="tn-news">
+          <div id="featured" class="container tab-pane active">
+            <div class="tn-news" *ngFor="let newMiddle of middleNew2">
               <div class="tn-img">
-                <img src="assets/img/news-350x223-5.jpg" alt=""/>
+                <img src="{{newMiddle.img}}" alt=""/>
               </div>
               <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-4.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-3.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-          </div>
-          <div id="m-read" class="container tab-pane fade">
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-2.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-1.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-3.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-          </div>
-          <div id="m-recent" class="container tab-pane fade">
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-4.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-5.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
-              </div>
-            </div>
-            <div class="tn-news">
-              <div class="tn-img">
-                <img src="assets/img/news-350x223-1.jpg" alt=""/>
-              </div>
-              <div class="tn-title">
-                <a href="">Lorem ipsum dolor sit amet</a>
+                <a href="/single-page/{{newMiddle.id}}/2">{{newMiddle.title}}</a>
               </div>
             </div>
           </div>
@@ -436,75 +235,11 @@
     <div class="row">
       <div class="col-lg-9">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4" *ngFor="let new of news | slice:0: 9">
             <div class="mn-img">
-              <img src="assets/img/news-350x223-1.jpg" alt=""/>
+              <img src="{{new.img}}" alt=""/>
               <div class="mn-title">
-                <a href="">Lorem ipsum dolor sit</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="mn-img">
-              <img src="assets/img/news-350x223-2.jpg" alt=""/>
-              <div class="mn-title">
-                <a href="">Lorem ipsum dolor sit</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="mn-img">
-              <img src="assets/img/news-350x223-3.jpg" alt=""/>
-              <div class="mn-title">
-                <a href="">Lorem ipsum dolor sit</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="mn-img">
-              <img src="assets/img/news-350x223-4.jpg" alt=""/>
-              <div class="mn-title">
-                <a href="">Lorem ipsum dolor sit</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="mn-img">
-              <img src="assets/img/news-350x223-5.jpg" alt=""/>
-              <div class="mn-title">
-                <a href="">Lorem ipsum dolor sit</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="mn-img">
-              <img src="assets/img/news-350x223-1.jpg" alt=""/>
-              <div class="mn-title">
-                <a href="">Lorem ipsum dolor sit</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="mn-img">
-              <img src="assets/img/news-350x223-2.jpg" alt=""/>
-              <div class="mn-title">
-                <a href="">Lorem ipsum dolor sit</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="mn-img">
-              <img src="assets/img/news-350x223-3.jpg" alt=""/>
-              <div class="mn-title">
-                <a href="">Lorem ipsum dolor sit</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="mn-img">
-              <img src="assets/img/news-350x223-4.jpg" alt=""/>
-              <div class="mn-title">
-                <a href="">Lorem ipsum dolor sit</a>
+                <a href="/single-page/{{new.id}}/1">{{new.title}}</a>
               </div>
             </div>
           </div>
@@ -515,16 +250,10 @@
         <div class="mn-list">
           <h2>Read More</h2>
           <ul>
-            <li><a href="">Lorem ipsum dolor sit amet</a></li>
-            <li><a href="">Pellentesque tincidunt enim libero</a></li>
-            <li><a href="">Morbi id finibus diam vel pretium enim</a></li>
-            <li><a href="">Duis semper sapien in eros euismod sodales</a></li>
-            <li><a href="">Vestibulum cursus lorem nibh</a></li>
-            <li><a href="">Morbi ullamcorper vulputate metus non eleifend</a></li>
-            <li><a href="">Etiam vitae elit felis sit amet</a></li>
-            <li><a href="">Nullam congue massa vitae quam</a></li>
-            <li><a href="">Proin sed ante rutrum</a></li>
-            <li><a href="">Curabitur vel lectus</a></li>
+            <li *ngFor="let new of newsCategory2 |slice:0:8">
+              <a href="/single-page/{{new.id}}/2">{{new.title}}</a>
+            </li>
+
           </ul>
         </div>
       </div>
